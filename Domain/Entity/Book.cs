@@ -9,7 +9,7 @@
         public string Description { get; set; }
         public List<BookAuthor> BookAuthors { get; set; } = new();
         //public bool IsCheckedOut { get; set; }
-        public DateTime? CheckoutDate { get; set; }
-        public DateTime? ReturnDate { get; set; }
+        public DateTime CheckoutDate { get; set; }
+        public DateTime ReturnDate { get; set; }
     }
 }
