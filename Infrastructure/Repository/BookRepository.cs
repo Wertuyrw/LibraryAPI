@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repository
 {
-    public class BookRepository : IBookRepository
+    public class BookRepository : BaseRepository<Book>, IBookRepository
     {
         private readonly LibraryDBContext _context;
 
-        public BookRepository(LibraryDBContext context)
+        public BookRepository(LibraryDBContext context) : base(context)
         {
             _context = context;
         }

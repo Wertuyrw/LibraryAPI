@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repository
 {
-    public class AuthorRepository : IAuthorRepository
+    public class AuthorRepository : BaseRepository<Author>, IAuthorRepository
     {
         private readonly LibraryDBContext _context;
 
-        public AuthorRepository(LibraryDBContext context)
+        public AuthorRepository(LibraryDBContext context) : base(context)
         {
             _context = context;
         }

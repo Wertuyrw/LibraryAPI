@@ -2,7 +2,7 @@
 using Application.Services.Interfaces;
 using AutoMapper;
 using Domain.Entity;
-using Domain.Exceptions;
+using Application.Exceptions;
 using Microsoft.Extensions.Logging;
 
 namespace Application.Services

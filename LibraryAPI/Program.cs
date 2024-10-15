@@ -25,6 +25,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 
 

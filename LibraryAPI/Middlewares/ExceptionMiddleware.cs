@@ -1,5 +1,5 @@
 ﻿using Application.DTO;
-using Domain.Exceptions;
+using Application.Exceptions;
 using System.Net;
 using System.Security.Authentication;
 

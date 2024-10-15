@@ -2,7 +2,7 @@
 using Application.Services.Interfaces;
 using AutoMapper;
 using Domain.Entity;
-using Domain.Exceptions;
+using Application.Exceptions;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 
@@ -13,12 +13,14 @@ namespace Application.Services
     {
         private readonly IAccountRepository _accountRepository;
         private readonly ILogger<AccountService> _logger;
+        private readonly IPasswordService _passwordService;
         private readonly IMapper _mapper;
 
 
-        public AccountService(IAccountRepository accountRepository, IMapper mapper, ILogger<AccountService> logger)
+        public AccountService(IAccountRepository accountRepository, IPasswordService passwordService, IMapper mapper, ILogger<AccountService> logger)
         {
             _accountRepository = accountRepository;
+            _passwordService = passwordService;
             _mapper = mapper;
             _logger = logger;
         }
